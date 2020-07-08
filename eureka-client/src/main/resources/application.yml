@@ -1,0 +1,10 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: eureka-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8002/eureka/,http://127.0.0.1:8003/eureka/ #注册中心地址
+#      defaultZone: http://127.0.0.1:8001/eureka/ #注册中心地址
