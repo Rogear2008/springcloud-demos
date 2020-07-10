@@ -1,12 +1,12 @@
 server:
-  port: 8301
+  port: 8701
 spring:
   application:
-    name: ribbon-service
+    name: openfeign-service
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8001/eureka
-
-service-url:
-  user-service: http://user-service
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,16 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+zuul:
+  routes:
+    user-service:
+      path: /userService/**
+    openfeign-service:
+      path: /openfeignService/**
+  prefix: /pre
